@@ -16,39 +16,58 @@ const gameBoard = (() => {
   const checkResult = () => {
     if (
       gameState[0][0] === gameState[0][1] &&
-      gameState[0][1] === gameState[0][2]
+      gameState[0][1] === gameState[0][2] &&
+      gameState[0][1]
     ) {
       return gameState[0][0];
     } else if (
       gameState[1][0] === gameState[1][1] &&
-      gameState[1][1] === gameState[1][2]
+      gameState[1][1] === gameState[1][2] &&
+      gameState[1][2]
     ) {
       return gameState[1][0];
     } else if (
       gameState[2][0] === gameState[2][1] &&
-      gameState[2][1] === gameState[2][2]
+      gameState[2][1] === gameState[2][2] &&
+      gameState[2][2]
     ) {
       return gameState[2][0];
     } else if (
       gameState[0][0] === gameState[1][1] &&
-      gameState[1][1] === gameState[2][2]
+      gameState[1][1] === gameState[2][2] &&
+      gameState[2][2]
     ) {
       return gameState[0][0];
     } else if (
       gameState[0][2] === gameState[1][1] &&
-      gameState[1][1] === gameState[2][0]
+      gameState[1][1] === gameState[2][0] &&
+      gameState[2][0]
     ) {
       return gameState[0][2];
     } else if (
       gameState[0][1] === gameState[1][1] &&
-      gameState[1][1] === gameState[2][1]
+      gameState[1][1] === gameState[2][1] &&
+      gameState[2][1]
     ) {
       return gameState[0][1];
     } else if (
       gameState[1][0] === gameState[1][1] &&
-      gameState[1][1] === gameState[1][2]
+      gameState[1][1] === gameState[1][2] &&
+      gameState[1][2]
     ) {
       return gameState[1][0];
+    } else if (
+      gameState[0][0] === gameState[1][0] &&
+      gameState[1][0] === gameState[2][0] &&
+      gameState[2][0]
+    ) {
+      return gameState[0][0];
+    } else if (
+      gameState[0][2] === gameState[1][2] &&
+      gameState[1][2] === gameState[2][2] &&
+      gameState[2][2]
+    ) {
+      return gameState[0][2];
     } else {
       //Check if the board is full and no one has won
       let full = true;
